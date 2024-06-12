@@ -1,0 +1,28 @@
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+
+const SkeletonCard = () => {
+  return (
+    <Card className="flex flex-col justify-between">
+      <CardHeader className="flex-row gap-4 items-center">
+        <Skeleton className="w-12 h-12 rounded-full" />
+        <Skeleton className="h-6 flex-grow rounded-full" />
+      </CardHeader>
+      <CardContent>
+        <Skeleton className="h-4 flex-grow mt-4 rounded-full" />
+        <Skeleton className="h-4 flex-grow mt-4 rounded-full" />
+        <Skeleton className="h-4 w-1/2 mt-4 rounded-full" />
+      </CardContent>
+      <CardFooter>
+        <Skeleton className="h-10 w-28 rounded-full" />
+      </CardFooter>
+    </Card>
+  );
+};
+
+export default SkeletonCard;
